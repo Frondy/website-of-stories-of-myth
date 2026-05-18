@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>中国神话人物志列传宇宙｜中华传统文化典藏</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft Yahei", sans-serif;
+}
+body {
+  background: #140e0c;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://picsum.photos/id/1048/1920/1080");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f6e8d7;
+  line-height: 1.8;
+}
+.author-bar {
+  background: rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid #d4af37;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #f6d7b0;
+}
+.author-bar strong {
+  color: #ffdf80;
+}
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+  box-shadow: 0 0 30px #000;
+  position: relative;
+}
+.user-bar {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #ffdf80;
+  font-size: 0.95rem;
+}
+.user-bar button {
+  background: none;
+  border: 1px solid #ffdf80;
+  color: #ffdf80;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+header h1 {
+  font-size: 2.2rem;
+  color: #f6d7b0;
+  text-shadow: 0 0 12px #d4af37;
+  margin-bottom: 0.6rem;
+}
+header p {
+  color: #e0c8a8;
+  font-size: 1rem;
+}
+.banner {
+  background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(185,139,90,0.15));
+  border: 1px solid #d4af37;
+  border-left: 6px solid #f6d7b0;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 10px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+}
+.banner h2 {
+  color: #ffdf80;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.banner p {
+  color: #e8d5bc;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.free-card {
+  background: rgba(20, 12, 10, 0.85);
+  border: 1px solid #c9a87e;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+.free-card h2 {
+  color: #f6d7b0;
+  border-left: 5px solid #d4af37;
+  padding-left: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+.free-card p {
+  color: #e0d0b8;
+  margin-bottom: 1rem;
+}
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1rem;
+}
+.pay-card {
+  background: rgba(26, 17, 15, 0.92);
+  border: 1px solid #b98b5a;
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.pay-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+.pay-card h3 {
+  color: #f6d7b0;
+  margin-bottom: 0.7rem;
+  font-size: 1.15rem;
+  min-height: 28px;
+}
+.pay-card p {
+  color: #c0b098;
+  margin-bottom: 1.1rem;
+  font-size: 0.95rem;
+  min-height: 40px;
+}
+.price {
+  color: #ffdf80;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.85rem;
+  color: #111;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 6px;
+}
+.read-btn {
+  background: linear-gradient(135deg, #b98b5a, #d4af37);
+}
+.down-btn {
+  background: linear-gradient(135deg, #3a7bd5, #4fc3f7);
+  color: #fff !important;
+}
+.vip-box {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.vip-card {
+  background: rgba(26,17,15,0.9);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+}
+.vip-card h3 {
+  color: #ffdf80;
+  margin-bottom: 1rem;
+}
+.vip-card p {
+  margin: 0.5rem 0;
+}
+.vip-btn {
+  background: #d4af37;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.modal-box {
+  background: #1a1110;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(212,175,55,0.4);
+}
+.modal-box h3 {
+  color: #f6d7b0;
+  margin-bottom: 1rem;
+}
+.modal-box p {
+  color: #e0c8a8;
+  margin-bottom: 0.6rem;
+}
+#payPrice {
+  color: #ffdf80;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.qrcode {
+  width: 230px;
+  height: 230px;
+  margin: 1rem auto;
+  border: 4px solid #d4af37;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+.close-btn {
+  margin-top: 1.2rem;
+  padding: 0.8rem 2rem;
+  background: #664c38;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.auth-modal input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  background: #222;
+  border: 1px solid #d4af37;
+  color: #fff;
+  border-radius: 6px;
+}
+footer {
+  background: rgba(0,0,0,0.8);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid #c9a87e;
+  color: #b9a388;
+  margin-top: 4rem;
+}
+</style>
+</head>
+<body>
+
+<div class="author-bar">
+  作品原创｜<strong>王健文（笔名：柏拉图王）</strong>｜博士｜文学创作者｜音乐人｜企业创始人
+</div>
+
+<header>
+  <div class="user-bar" id="userBar">
+    <span id="userInfo">未登录</span>
+    <button onclick="showAuth('register')">注册</button>
+    <button onclick="showAuth('login')">登录</button>
+  </div>
+  <h1>中国神话人物志列传宇宙</h1>
+  <p>中华传统文化典藏｜严谨文学创作｜科学体系梳理｜全景式神话世界观</p>
+</header>
+
+<div class="banner">
+  <h2>📜 本平台宗旨：传承中华文脉，重塑神话正统</h2>
+  <p>✅ 本作品以严谨文献考据为基础，兼具高度<strong>文学性</strong>与<strong>文化阐释价值</strong>。</p>
+  <p>✅ 系统梳理上古神话、封神、西游、民间传说，构建<strong>逻辑自洽、体系完整</strong>的中华神话宇宙。</p>
+  <p>✅ 以文学笔法还原神祇精神世界，坚持正统文化表达，<strong>致力于中华优秀传统文化传承与普及</strong>。</p>
+  <p>✅ 帮助大众深入理解中华文脉根源，<strong>树立文化自信、文化认同与文化自觉</strong>。</p>
+  <p>📌 阅读 = 会员权限｜下载 = 单独付费</p>
+</div>
+
+<div class="container">
+<section class="free-card">
+<h2>作者与创作介绍</h2>
+<p>王健文，笔名柏拉图王，博士学历；多平台签约音乐人、网络与传统严肃文学创作者，同时担任初创企业创始人、CEO。</p>
+<p>作者长期深耕人文研究与文学创作，具备扎实的文学素养与浓厚的文化情怀，致力于以系统化、文学化、普及化的方式推动中华优秀传统文化传播。</p>
+<p>本作品以中国神话体系为核心，重新阐释中华神话人物的精神内涵与文化象征，帮助大众以全新视角理解中华文脉中的精神图腾与文化符号，增强民族文化记忆、文化认同与文化自信，引导大众树立传承、弘扬与发展中华优秀传统文化的自觉意识。</p>
+</section>
+</div>
+
+<div class="container">
+  <section class="free-card">
+    <h2>会员体系说明</h2>
+    <div class="vip-box">
+      <div class="vip-card">
+        <h3>普通会员 30 元</h3>
+        <p>可阅读：1篇小说 + 1篇人物列传</p>
+        <p>有效期：永久</p>
+        <button class="vip-btn" onclick="openPay('普通会员(30元)','30元')">开通普通会员</button>
+      </div>
+      <div class="vip-card">
+        <h3>超级会员 100 元</h3>
+        <p>可阅读：全部小说 + 全部人物列传</p>
+        <p>有效期：永久</p>
+        <button class="vip-btn" onclick="openPay('超级会员(100元)','100元')">开通超级会员</button>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1rem; color:#ffdf80;">
+    🔹 阅读是会员权利｜🔹 下载需单独付费｜🔹 开通后立即生效
+    </p>
+  </section>
+
+  <section class="free-card">
+    <h2>一、神话小说故事集（阅读=会员｜下载=单独付费）</h2>
+    <div class="grid-box">
+      <div class="pay-card">
+        <h3>上古神纪·开天定序</h3>
+        <p>盘古开天、女娲造人、伏羲画卦、神农尝百草</p>
+        <div class="price">下载：29.9 元</div>
+        <button class="btn read-btn" data-url="story_1.html">在线阅读</button>
+        <button class="btn down-btn" onclick="openPay('上古神纪 下载','29.9元')">付费下载</button>
+      </div>
+      <div class="pay-card">
+        <h3>封神演义·三界分封</h3>
+        <p>姜子牙封神、阐教截教纷争、正统神话优化</p>
+        <div class="price">下载：39.9 元</div>
+        <button class="btn read-btn" data-url="story_2.html">在线阅读</button>
+        <button class="btn down-btn" onclick="openPay('封神演义 下载','39.9元')">付费下载</button>
+      </div>
+      <div class="pay-card">
+        <h3>西游记·因果渡化</h3>
+        <p>取经大业、三界因果、正统神话体系融合</p>
+        <div class="price">下载：39.9 元</div>
+        <button class="btn read-btn" data-url="story_3.html">在线阅读</button>
+        <button class="btn down-btn" onclick="openPay('西游记 下载','39.9元')">付费下载</button>
+      </div>
+      <div class="pay-card">
+        <h3>三界维稳纪·神妖共生</h3>
+        <p>八仙、嫦娥、沉香、神妖和谐共生新篇章</p>
+        <div class="price">下载：29.9 元</div>
+        <button class="btn read-btn" data-url="story_4.html">在线阅读</button>
+        <button class="btn down-btn" onclick="openPay('三界维稳纪 下载','29.9元')">付费下载</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="free-card">
+    <h2>二、神话人物志列传（阅读=会员｜下载=单独付费）</h2>
+    <div class="grid-box">
+      <div class="pay-card"><h3>盘古传·开天立道</h3><p>宇宙本源，创世之神</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_01_pangu.html">阅读</button><button class="btn down-btn" onclick="openPay('盘古传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>女娲传·抟土育灵</h3><p>人类之母，炼石补天</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_02_nvwa.html">阅读</button><button class="btn down-btn" onclick="openPay('女娲传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>伏羲传·画卦启智</h3><p>人文始祖，天道解读</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_03_fuxi.html">阅读</button><button class="btn down-btn" onclick="openPay('伏羲传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>蚩尤传·魔神归心</h3><p>上古战神，执念救赎</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_04_chiyou.html">阅读</button><button class="btn down-btn" onclick="openPay('蚩尤传 下载','19.9元')">下载</button></div>
+
+      <div class="pay-card"><h3>杨戬传·清源显圣</h3><p>二郎真君，三界战神</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_05_yangjian.html">阅读</button><button class="btn down-btn" onclick="openPay('杨戬传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>哪吒传·莲花重生</h3><p>剔骨还父，莲花化身</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_06_nazha.html">阅读</button><button class="btn down-btn" onclick="openPay('哪吒传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>姜子牙传·封神定序</h3><p>封神大使，人间丞相</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_07_jiangziya.html">阅读</button><button class="btn down-btn" onclick="openPay('姜子牙传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>申公豹传·执念成魔</h3><p>同门相妒，因果警示</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_08_shenggongbao.html">阅读</button><button class="btn down-btn" onclick="openPay('申公豹传 下载','19.9元')">下载</button></div>
+
+      <div class="pay-card"><h3>悟空传·石心向道</h3><p>齐天大圣，斗战胜佛</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_09_wukong.html">阅读</button><button class="btn down-btn" onclick="openPay('悟空传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>唐僧传·金蝉渡世</h3><p>十世修行，慈悲渡人</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_10_tangseng.html">阅读</button><button class="btn down-btn" onclick="openPay('唐僧传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>猪八戒传·憨直归正</h3><p>天蓬元帅，净坛使者</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_11_zhubajie.html">阅读</button><button class="btn down-btn" onclick="openPay('猪八戒传 下载','19.9元')">下载</button></div>
+      <div class="pay-card"><h3>观音传·普度众生</h3><p>慈悲化身，三界救苦</p><div class="price">下载：19.9元</div><button class="btn read-btn" data-url="legend_12_guanyin.html">阅读</button><button class="btn down-btn" onclick="openPay('观音传 下载','19.9元')">下载</button></div>
+
+      <div class="pay-card"><h3>铁拐李传</h3><p>八仙之首，点化世人</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_13_tieguaili.html">阅读</button><button class="btn down-btn" onclick="openPay('铁拐李传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>汉钟离传</h3><p>正阳祖师，传道度人</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_14_hanzhongli.html">阅读</button><button class="btn down-btn" onclick="openPay('汉钟离传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>吕洞宾传</h3><p>纯阳真人，剑仙风流</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_15_lvdongbin.html">阅读</button><button class="btn down-btn" onclick="openPay('吕洞宾传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>何仙姑传</h3><p>八仙唯一女仙</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_16_hexianru.html">阅读</button><button class="btn down-btn" onclick="openPay('何仙姑传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>嫦娥传·广寒守月</h3><p>月宫仙子，千年守望</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_17_change.html">阅读</button><button class="btn down-btn" onclick="openPay('嫦娥传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>沉香传·劈山救母</h3><p>孝感动天，华山救母</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_18_chenxiang.html">阅读</button><button class="btn down-btn" onclick="openPay('沉香传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>蓝采和传</h3><p>洒脱散仙，游戏人间</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_19_lancaihe.html">阅读</button><button class="btn down-btn" onclick="openPay('蓝采和传 下载','12.9元')">下载</button></div>
+      <div class="pay-card"><h3>张果老传</h3><p>倒骑毛驴，长寿仙翁</p><div class="price">下载：12.9元</div><button class="btn read-btn" data-url="legend_20_zhangguolao.html">阅读</button><button class="btn down-btn" onclick="openPay('张果老传 下载','12.9元')">下载</button></div>
+    </div>
+  </section>
+</div>
+
+<div class="modal" id="payModal">
+  <div class="modal-box">
+    <h3>💰 支付确认</h3>
+    <p id="payTitle"></p>
+    <p id="payPrice"></p>
+    <p>微信 / 支付宝 扫码付款（不区分）</p>
+    <img class="qrcode" src="shoukuanma.jpg" alt="统一收款码">
+    <p style="margin-top:1rem; font-size:0.9rem; color:#ccc;">付款后联系客服开通权限</p>
+    <button class="close-btn" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<div class="modal" id="authModal">
+  <div class="modal-box auth-modal">
+    <h3 id="authTitle">登录</h3>
+    <input type="text" id="user" placeholder="用户名">
+    <input type="password" id="pwd" placeholder="密码">
+    <button class="vip-btn" onclick="doAuth()">确认</button>
+    <button class="close-btn" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 中国神话人物志列传宇宙 ｜ 原创作者：王健文（柏拉图王）</p>
+  <p>专注中华优秀传统文化传承与普及</p>
+  <p>阅读=会员权限｜下载=单独付费</p>
+</footer>
+
+<script>
+// ====================== 登录注册修复版 100%可用 ======================
+let user = null;
+let users = JSON.parse(localStorage.getItem('users')) || [];
+let vip = JSON.parse(localStorage.getItem('vip')) || { type: null };
+let authType = '';
+let payItem = { name: '', price: '' };
+
+// 页面加载时恢复登录状态
+function init() {
+  let savedUser = localStorage.getItem('currentUser');
+  if (savedUser) {
+    user = JSON.parse(savedUser);
+    updateUI();
+  }
+}
+
+// 更新界面
+function updateUI() {
+  if (user) {
+    document.getElementById('userInfo').innerText = `欢迎：${user.username}｜${vip.type || '普通用户'}`;
+    document.querySelector('.user-bar').innerHTML = `
+      <span id="userInfo">欢迎：${user.username}｜${vip.type || '普通用户'}</span>
+      <button onclick="logout()">退出</button>
+    `;
+  } else {
+    document.getElementById('userInfo').innerText = "未登录";
+  }
+}
+
+// 打开登录/注册弹窗
+function showAuth(type) {
+  authType = type;
+  document.getElementById('authTitle').innerText = type === 'register' ? '注册' : '登录';
+  document.getElementById('authModal').style.display = 'flex';
+}
+
+// 执行登录/注册
+function doAuth() {
+  let username = document.getElementById('user').value.trim();
+  let password = document.getElementById('pwd').value.trim();
+
+  if (!username || !password) {
+    alert('请输入账号和密码');
+    return;
+  }
+
+  if (authType === 'register') {
+    let exists = users.some(u => u.username === username);
+    if (exists) {
+      alert('用户名已存在');
+      return;
+    }
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('注册成功！请登录');
+    closeModal();
+  } else {
+    let targetUser = users.find(u => u.username === username && u.password === password);
+    if (!targetUser) {
+      alert('账号或密码错误');
+      return;
+    }
+    user = targetUser;
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    alert('登录成功');
+    closeModal();
+    updateUI();
+  }
+}
+
+// 退出登录
+function logout() {
+  user = null;
+  localStorage.removeItem('currentUser');
+  updateUI();
+  location.reload();
+}
+
+// 支付弹窗
+function openPay(name, price) {
+  if (!user) {
+    alert('请先登录');
+    showAuth('login');
+    return;
+  }
+  payItem = { name, price };
+  document.getElementById('payTitle').innerText = `项目：${name}`;
+  document.getElementById('payPrice').innerText = `金额：${price}`;
+  document.getElementById('payModal').style.display = 'flex';
+}
+
+// 关闭弹窗
+function closeModal() {
+  document.getElementById('payModal').style.display = 'none';
+  document.getElementById('authModal').style.display = 'none';
+}
+
+// 阅读权限判断
+function bindReadEvents() {
+  document.querySelectorAll('.read-btn').forEach(btn => {
+    btn.onclick = () => {
+      if (!user) {
+        alert('请先登录');
+        showAuth('login');
+        return;
+      }
+      if (!vip.type) {
+        alert('请开通会员后阅读');
+        return;
+      }
+      window.open(btn.dataset.url);
+    };
+  });
+}
+
+window.onclick = e => {
+  if (e.target.classList.contains('modal')) closeModal();
+};
+
+// 初始化
+init();
+bindReadEvents();
+</script>
+</body>
+</html>
